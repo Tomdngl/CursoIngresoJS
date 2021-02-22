@@ -1,12 +1,25 @@
 /*
 Al presionar el botón pedir un sexo
-'f' para femenino, 'm' para masculino.*/
+'f' para femenino, 'm' para masculino.
+Tomás D'Angelo
+Ejercicio 5 while*/
 function mostrar()
 {
-	var sexoIngresado;
-	sexoIngresado = prompt("ingrese f ó m .");
+
+	let sexoIngresado;
+	do {	
+		sexoIngresado = prompt("ingrese f ó m .");
+
+		switch (sexoIngresado) {
+			case "f":
+				document.getElementById('txtIdSexo').value="femenino";
+				break;
+			case "m":
+				document.getElementById('txtIdSexo').value="masculino";
+				break;
+		}
+
+	} while (sexoIngresado!="f" && sexoIngresado!="m");
 
 
-
-	txtIdSexo.value=sexoIngresado;
 }//FIN DE LA FUNCIÓN
